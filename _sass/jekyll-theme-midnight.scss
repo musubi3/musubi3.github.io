@@ -196,9 +196,13 @@ dt {
           color: white;
           text-decoration: none;
           font-weight: bold;
-          padding: 23px 15px;
+          padding: 23.5px 15px;
           transition: background-color 0.4s ease, color 0.4s ease;
-
+          
+          &.home {
+            background-color: #2a2a29;
+          }
+          
           &:hover {
             color: rgb(35, 35, 35);
             background-color: #9acf9f;
