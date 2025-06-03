@@ -18,4 +18,4 @@ A simple game built in Java.
 
 ### Javascript
 #### [pokemon.js](https://github.com/musubi3/pokemon.js)
-A JavaScript library that makes interacting with PokeAPI easier.
+A JavaScript wrapper that makes interacting with PokeAPI easier.
