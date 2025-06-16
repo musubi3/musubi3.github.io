@@ -14,7 +14,7 @@ A data-driven analysis exploring how calories impact average recipe ratings, usi
 
 ### Java
 #### [Wave](https://musubi3.github.io/Wave/)
-Wave is a simple 2D game I developed in Java during my senior year of high school.
+A simple 2D game I developed in Java during my senior year of high school.
 
 ### Javascript
 #### [pokemon.js](https://github.com/musubi3/pokemon.js)
