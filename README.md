@@ -13,7 +13,7 @@ Hello, I'm Justin. I'm currently a Data Science student at the University of Cal
 A data-driven analysis exploring how calories impact average recipe ratings, using Python and interactive plots.
 
 ### Java
-#### [Wave](https://github.com/musubi3/Wave)
+#### [Wave](https://musubi3.github.io/Wave/)
 A simple game built in Java.
 
 ### Javascript
