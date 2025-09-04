@@ -17,5 +17,5 @@ A data-driven analysis exploring how calories impact average recipe ratings, usi
 A simple 2D game I developed during my junior year of high school.
 
 ### Javascript
-#### [pokemon.js](https://github.com/musubi3/pokemon.js)
+#### [pokemon.js](https://musubi3.github.io/pokemon.js/)
 A JavaScript wrapper that makes interacting with PokeAPI easier.
