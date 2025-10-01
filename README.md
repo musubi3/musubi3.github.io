@@ -16,6 +16,6 @@ A data-driven analysis exploring how calories impact average recipe ratings, usi
 #### [Wave](https://musubi3.github.io/Wave/)
 A simple 2D game I developed during my junior year of high school.
 
-### Javascript
+### JavaScript
 #### [pokemon.js](https://musubi3.github.io/pokemon.js/)
 A Node.js module that makes interacting with PokéAPI easier.
