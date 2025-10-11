@@ -485,39 +485,67 @@ h6 {
   font-size: 1.8em;
 }
 
+/* Hide hamburger menu by default (desktop) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  padding: 0.5em;
+  cursor: pointer;
+  color: var(--color-accent);
+}
+
+/* MOBILE */
 @media (max-width: 768px) {
   .nav-wrapper {
-    overflow-x: auto;
-    /* Enable horizontal scroll if needed */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+    border-bottom: 1px solid oklch(90% 3% 200);
   }
 
   .nav-wrapper nav {
-    flex-wrap: nowrap;
-    /* Keep in single row */
-    padding: 0.75em;
-    min-width: min-content;
-    /* Allow shrinking */
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 4px 12px oklch(0% 0% 0 / 0.1);
+    border-radius: 0 0 12px 12px;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .nav-wrapper nav.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
   }
 
   .nav-wrapper nav a {
-    flex: 0 1 auto;
-    /* Don't grow equally */
-    white-space: nowrap;
-    /* Prevent text wrapping */
-    padding: 0.6em 0.8em;
-    font-size: 0.85em;
+    padding: 1em;
+    border-bottom: 1px solid oklch(95% 3% 200);
+    text-align: left;
   }
 
-  /* Ensure content is visible */
-  .content {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 1em !important;
+  .nav-wrapper nav a:last-child {
+    border-bottom: none;
   }
 
-  /* Fix images */
-  img {
-    max-width: 100%;
-    height: auto;
+  /* Hamburger button */
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    padding: 0.5em;
+    cursor: pointer;
+    color: var(--color-accent);
   }
 }

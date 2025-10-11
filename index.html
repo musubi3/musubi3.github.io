@@ -11,9 +11,35 @@
     <script>
         try { navigator.mediaSession?.setActionHandler('enterpictureinpicture', null); } catch (e) { }
     </script>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('main-nav');
+            nav.classList.toggle('active');
+        }
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('#main-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                const nav = document.getElementById('main-nav');
+                nav.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function (event) {
+            const nav = document.getElementById('main-nav');
+            const toggle = document.querySelector('.menu-toggle');
+            if (!nav.contains(event.target) && !toggle.contains(event.target)) {
+                nav.classList.remove('active');
+            }
+        });
+    </script>
 </head>
 
 <body>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
     <div class="nav-wrapper">
         <nav id="main-nav">
             <a href="index.html" class="current">Home</a>
