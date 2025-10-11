@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <link rel="stylesheet" href="../styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Justin Lee: Contact</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <style>
+        /* Toast Styles */
+        .toast {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--color-accent);
+            color: white;
+            padding: 1em 1.5em;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px oklch(0% 0% 0 / 0.2);
+            transform: translateX(150%);
+            transition: transform 0.3s ease;
+            z-index: 10000;
+            max-width: 300px;
+        }
+
+        .toast.show {
+            transform: translateX(0);
+        }
+
+        .toast.success { 
+            background: oklch(60% 0.1236 133.88); /* Green */
+        }
+        
+        .toast.error { 
+            background: oklch(55% 0.1113 355.31); /* Red */
+        }
+    </style>
 
     <script>
         try { navigator.mediaSession?.setActionHandler('enterpictureinpicture', null); } catch (e) { }
@@ -27,13 +56,75 @@
 
     <div class="content">
         <h1>Contact</h1>
-        <form action="mailto:ju3tinlee@gmail.com" method="post" enctype="text/plain">
-            <label>Email: <input type="email" name="email" autocomplete="email"></label>
-            <label>Subject: <input type="text" name="subject" autocomplete="off"></label>
-            <label>Body: <textarea name="body" autocomplete="off"></textarea></label>
-            <button>Submit</button>
+
+        <!-- Toast container -->
+        <div id="toast" class="toast"></div>
+
+        <form action="https://formspree.io/f/xqayywoq" method="POST" class="contact-form" id="contactForm">
+            <label>
+                Your Email:
+                <input type="email" name="email" value="" required>
+            </label>
+
+            <label>
+                Subject:
+                <input type="text" name="subject" value="" required>
+            </label>
+
+            <label>
+                Message:
+                <textarea name="message" value="" required></textarea>
+            </label>
+
+            <button type="submit">Send Message</button>
         </form>
+
+        <script>
+            const form = document.getElementById('contactForm');
+            if (form) {
+                form.addEventListener('submit', async function (e) {
+                    e.preventDefault();
+                    const button = this.querySelector('button[type="submit"]');
+                    const originalText = button.textContent;
+
+                    button.textContent = 'Sending...';
+                    button.disabled = true;
+
+                    try {
+                        const response = await fetch(this.action, {
+                            method: 'POST',
+                            body: new FormData(this),
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        });
+
+                        if (response.ok) {
+                            showToast('🎉 Message sent! I\'ll get back to you soon.', 'success');
+                            this.reset();
+                        } else {
+                            showToast('❌ Failed to send message. Please try again.', 'error');
+                        }
+                    } catch (error) {
+                        showToast('❌ Error sending message. Please check your connection.', 'error');
+                    } finally {
+                        button.textContent = originalText;
+                        button.disabled = false;
+                    }
+                });
+            }
+
+            function showToast(message, type = 'success') {
+                const toast = document.getElementById('toast');
+                toast.textContent = message;
+                toast.className = `toast ${type}`;
+                toast.classList.add('show');
+                
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 4000);
+            }
+        </script>
     </div>
 </body>
-
 </html>
