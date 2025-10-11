@@ -408,9 +408,6 @@ h6 {
 
 .hero-image {
   margin-top: 1.5em;
-  max-width: 100%;
-  height: auto;
-
 }
 
 .intro {
@@ -488,83 +485,29 @@ h6 {
   font-size: 1.8em;
 }
 
-/* Mobile Navbar */
 @media (max-width: 768px) {
-  .nav-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    margin: 0;
-    padding: 1em;
-  }
-
-  nav {
-    flex-direction: column;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px oklch(0% 0% 0 / 0.15);
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.3s ease;
-  }
-
-  nav.active {
-    max-height: 400px;
-  }
-
-  nav a {
-    padding: 1em;
-    text-align: left;
-    border-bottom: 1px solid oklch(90% 3% 200);
-  }
-
-  nav a:last-child {
-    border-bottom: none;
-  }
-
-  /* Hamburger Button */
-  .menu-toggle {
-    display: block;
-    background: var(--color-accent);
-    color: white;
-    border: none;
-    padding: 0.75em 1em;
-    border-radius: 8px;
-    cursor: pointer;
-    width: 100%;
-    text-align: center;
-  }
-
-  .hero {
-    grid-template-columns: 1fr;
-    gap: 2em;
-    text-align: center;
-    padding: 2em 1em;
-  }
-
-  .hero-image,
-  .profile-placeholder {
-    width: 150px;
-    height: 150px;
-    margin: 0 auto;
-  }
-
-  .hero h1 {
-    font-size: 2em;
-  }
-
-  .hero h2 {
-    font-size: 1.2em;
-  }
-
-  .interests {
-    justify-content: center;
-  }
-}
-
-/* Hide toggle on desktop */
-.menu-toggle {
-  display: none;
+    /* Ensure nav is visible */
+    .nav-wrapper nav {
+        display: flex !important;
+        flex-wrap: wrap;
+        gap: 0.5em;
+    }
+    
+    .nav-wrapper nav a {
+        flex: 1 1 45%;
+        padding: 0.75em;
+    }
+    
+    /* Ensure content is visible */
+    .content {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 1em !important;
+    }
+    
+    /* Fix images */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 }
