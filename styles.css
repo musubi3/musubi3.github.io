@@ -486,28 +486,38 @@ h6 {
 }
 
 @media (max-width: 768px) {
-    /* Ensure nav is visible */
-    .nav-wrapper nav {
-        display: flex !important;
-        flex-wrap: wrap;
-        gap: 0.5em;
-    }
-    
-    .nav-wrapper nav a {
-        flex: 1 1 45%;
-        padding: 0.75em;
-    }
-    
-    /* Ensure content is visible */
-    .content {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 1em !important;
-    }
-    
-    /* Fix images */
-    img {
-        max-width: 100%;
-        height: auto;
-    }
+  .nav-wrapper {
+    overflow-x: auto;
+    /* Enable horizontal scroll if needed */
+  }
+
+  .nav-wrapper nav {
+    flex-wrap: nowrap;
+    /* Keep in single row */
+    padding: 0.75em;
+    min-width: min-content;
+    /* Allow shrinking */
+  }
+
+  .nav-wrapper nav a {
+    flex: 0 1 auto;
+    /* Don't grow equally */
+    white-space: nowrap;
+    /* Prevent text wrapping */
+    padding: 0.6em 0.8em;
+    font-size: 0.85em;
+  }
+
+  /* Ensure content is visible */
+  .content {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 1em !important;
+  }
+
+  /* Fix images */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
