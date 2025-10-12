@@ -1,3 +1,18 @@
+/* Manual overrides */
+:root[color-scheme="light"] {
+  --input-area: oklch(80% 3% 200);
+  --input-focused: oklch(from var(--color-accent) 80% c h);
+  --send-button: oklch(65% 3% 200);
+  --toast-shadow: oklch(0% 0% 0 / 0.2);
+}
+
+:root[color-scheme="dark"] {
+  --input-area: oklch(45% 3% 200);
+  --input-focused: oklch(from var(--color-accent) 45% c h);
+  --send-button: oklch(40% 3% 200);
+  --toast-shadow: oklch(0% 0% 0 / 0.7);
+}
+
 form {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -20,7 +35,7 @@ button {
 input,
 textarea {
   padding: 0.5em;
-  border: 1px solid oklch(80% 3% 200);
+  border: 1px solid var(--input-area);
   border-radius: 4px;
 }
 
@@ -31,12 +46,12 @@ textarea {
 
 input:focus,
 textarea:focus {
-  outline: 0.5px solid oklch(from var(--color-accent) 65% c h);
+  outline: 0.5px solid var(--input-focused);
 }
 
 button {
   padding: 0.75em 1.5em;
-  background-color: oklch(65% 3% 200);
+  background-color: var(--send-button);
   color: white;
   border: none;
   border-radius: 4px;
@@ -57,7 +72,7 @@ button:hover {
   color: white;
   padding: 1em 1.5em;
   border-radius: 8px;
-  box-shadow: 0 4px 12px oklch(0% 0% 0 / 0.2);
+  box-shadow: 0 4px 12px var(--toast-shadow);
   transform: translateX(150%);
   transition: transform 0.3s ease;
   z-index: 10000;

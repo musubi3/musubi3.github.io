@@ -1,3 +1,20 @@
+/* Manual overrides */
+:root[color-scheme="light"] {
+  --project-card: white;
+  --text-color: black;
+  --card-shadow: oklch(0% 0% 0 / 0.1);
+  --card-border: oklch(97% 3% 200);
+  --hover-shadow: oklch(0% 0% 0 / 0.3);
+}
+
+:root[color-scheme="dark"] {
+  --project-card: oklch(25% 3% 200);
+  --text-color: oklch(85% 5% 200);
+  --card-shadow: oklch(0% 0% 0 / 0.2);
+  --card-border: oklch(35% 3% 200);
+  --hover-shadow: oklch(0% 0% 0 / 0.7);
+}
+
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
@@ -31,17 +48,18 @@
   flex-direction: column;
   height: 85%;
   /* Take full grid cell height */
-  background: white;
+  color: var(--text-color);
+  background: var(--project-card);
   border-radius: 12px;
   padding: 1.5em;
-  box-shadow: 0 4px 12px oklch(0% 0% 0 / 0.1);
-  border: 1px solid oklch(97% 3% 200);
+  box-shadow: 0 4px 12px var(--card-shadow);
+  border: 1px solid var(--card-border);
   animation: fadeInUp 0.6s ease-out;
   transition: all 0.2s ease;
 }
 
 .project-card:hover {
-  box-shadow: 0 4px 12px oklch(0% 0% 0 / 0.3);
+  box-shadow: 0 4px 12px var(--hover-shadow);
   transform: translateY(-2px);
 }
 
