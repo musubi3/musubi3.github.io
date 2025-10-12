@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
     a.textContent = title;
 
     // Highlight current page
-    if (a.host === location.host && a.pathname === location.pathname) {
+    if (a.host === location.host && (a.pathname === location.pathname || a.pathname === '')) {
       a.classList.add('current');
     }
 
