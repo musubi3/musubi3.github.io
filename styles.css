@@ -136,9 +136,16 @@ h6 {
 
 .interest-tag {
   background: oklch(95% 3% 200);
+  border:  1px solid oklch(90% 3% 200);
   padding: 0.5em 1em;
   border-radius: 20px;
   font-size: 0.9em;
+  transition: all 0.2s ease;
+}
+
+.interest-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px oklch(0% 0% 0 / 0.1);
 }
 
 .featured-projects {
@@ -196,6 +203,7 @@ h6 {
   margin-bottom: 1.5em;
   font-size: 1.8em;
 }
+
 /* Hide hamburger menu by default (desktop) */
 .menu-toggle {
   display: none;
