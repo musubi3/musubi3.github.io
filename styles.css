@@ -571,7 +571,7 @@ h6 {
     display: block;
     font-size: 1.8em;
     color: var(--color-accent);
-    background: transparent;
+    background: transparent !important;
     border: none;
     cursor: pointer;
     padding: 0.5em 0.8em;
@@ -580,15 +580,12 @@ h6 {
   .menu-toggle:focus,
   .menu-toggle:active {
     outline: none;
-    background: transparent; /* Prevent green box */
-  }
-
-  .content {
-    padding-bottom: 1.5em;
+    background: transparent !important; /* Prevent green box */
   }
 
   body {
     margin: 0;
     overflow-x: hidden; /* avoid horizontal scrollbars */
+    padding-bottom: 1.5em;
   }
 }
