@@ -22,7 +22,6 @@
   --project-text: black;
   --intro: black;
   --text-color: black;
-  --body-bg: white;
 }
 
 /* Dark mode when OS prefers dark and no manual override */
@@ -42,7 +41,6 @@
     --project-border: oklch(35% 3% 200);
     --project-color: oklch(25% 3% 200);
     --project-text: oklch(90% 5% 200);
-    --body-bg: oklch(15% 3% 200);
     --text-color: oklch(85% 5% 200);
     --intro: oklch(85% 5% 200);
   }
@@ -65,7 +63,6 @@
   --project-text: black;
   --intro: black;
   --text-color: black;
-  --body-bg: white;
 }
 
 :root[color-scheme="dark"] {
@@ -83,7 +80,6 @@
   --project-border: oklch(35% 3% 200);
   --project-color: oklch(25% 3% 200);
   --project-text: oklch(90% 5% 200);
-  --body-bg: oklch(15% 3% 200);
   --text-color: oklch(85% 5% 200);
   --intro: oklch(85% 5% 200);
 }

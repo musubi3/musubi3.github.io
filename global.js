@@ -21,7 +21,7 @@ function $$(selector) {
 document.addEventListener('DOMContentLoaded', function () {
   const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
     ? "/"
-    : "https://musubi3.github.io/dsc106-portfolio/";
+    : "https://musubi3.github.io/";
 
   let pages = [
     { url: 'index.html', title: 'Home' },
