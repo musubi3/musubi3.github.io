@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="../styles.css">
     <meta charset="UTF-8">
@@ -7,44 +8,13 @@
     <title>Justin Lee: Contact</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
-    <style>
-        /* Toast Styles */
-        .toast {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: var(--color-accent);
-            color: white;
-            padding: 1em 1.5em;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px oklch(0% 0% 0 / 0.2);
-            transform: translateX(150%);
-            transition: transform 0.3s ease;
-            z-index: 10000;
-            max-width: 300px;
-        }
-
-        .toast.show {
-            transform: translateX(0);
-        }
-
-        .toast.success { 
-            background: oklch(60% 0.1236 133.88); /* Green */
-        }
-        
-        .toast.error { 
-            background: oklch(55% 0.1113 355.31); /* Red */
-        }
-    </style>
-
-    <script>
-        try { navigator.mediaSession?.setActionHandler('enterpictureinpicture', null); } catch (e) { }
-    </script>
+    <script src="../script.js"></script>
 </head>
 
 <body>
     <div class="nav-wrapper">
-        <nav>
+        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+        <nav id="main-nav">
             <a href="../index.html">Home</a>
             <a href="../resume/index.html">Resume</a>
             <a href="../projects/index.html">Projects</a>
@@ -53,7 +23,6 @@
             <a href="https://www.linkedin.com/in/justin-lee-634719352/" target="_blank">LinkedIn</a>
         </nav>
     </div>
-
     <div class="content">
         <h1>Contact</h1>
 
@@ -119,7 +88,7 @@
                 toast.textContent = message;
                 toast.className = `toast ${type}`;
                 toast.classList.add('show');
-                
+
                 setTimeout(() => {
                     toast.classList.remove('show');
                 }, 4000);
@@ -127,4 +96,5 @@
         </script>
     </div>
 </body>
+
 </html>
