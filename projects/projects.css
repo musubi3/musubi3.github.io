@@ -74,6 +74,7 @@
   padding: 1.5em;
   box-shadow: 0 4px 12px var(--card-shadow);
   border: 1px solid var(--card-border);
+  animation-delay: 0.1s;
   animation: fadeInUp 0.6s ease-out;
   transition: all 0.2s ease;
 }
@@ -111,6 +112,10 @@
   flex-grow: 1;
   /* Push everything to take equal space */
   line-height: 1.5;
+}
+
+.content > * {
+  animation: fadeInUp 0.6s ease-out;
 }
 
 @keyframes fadeInUp {
