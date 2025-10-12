@@ -61,7 +61,9 @@ document.addEventListener('DOMContentLoaded', function () {
     a.textContent = title;
 
     // Highlight current page
-    if (a.host === location.host && (a.pathname === location.pathname || this.location.pathname === '/')) {
+    console.log(window.location.pathname);
+
+    if ((a.host === location.host && a.pathname === location.pathname) || (p.title === 'Home' && window.location.pathname === '/')) {
       a.classList.add('current');
     }
 
@@ -150,12 +152,12 @@ function addDarkModeSwitcher() {
     label.textContent = isDark ? 'Dark Mode' : 'Light Mode';
   }
 
-  toggle.addEventListener('change', function() {
+  toggle.addEventListener('change', function () {
     const scheme = this.checked ? 'dark' : 'light';
     applyColorScheme(scheme);
     localStorage.colorScheme = scheme;
     label.textContent = scheme === 'dark' ? 'Dark Mode' : 'Light Mode';
-    
+
     // Update all external links with current theme
     updateExternalLinks(scheme);
   });
