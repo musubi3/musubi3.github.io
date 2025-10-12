@@ -4,6 +4,50 @@
   color-scheme: light dark;
 }
 
+/* Auto mode (respects OS preference) */
+:root:not([color-scheme]) {
+  --gradient1: oklch(100% 3% 200);
+  --gradient2: oklch(98% 3% 220);
+  --nav-bg: rgba(255, 255, 255, 0.8);
+  --nav-bottom: oklch(80% 3% 200);
+  --nav-shadow: oklch(0% 0% 0 / 0.2);
+  --hero-h2: oklch(50% 5% 200);
+  --interest-tag: oklch(95% 3% 200);
+  --tag-border: oklch(90% 3% 200);
+  --tag-shadow: oklch(0% 0% 0 / 0.1);
+  --project-shadow: oklch(0% 0% 0 / 0.1);
+  --hover-shadow: oklch(0% 0% 0 / 0.3);
+  --project-border: oklch(90% 3% 200);
+  --project-color: white;
+  --project-text: black;
+  --intro: black;
+  --text-color: black;
+  --body-bg: white;
+}
+
+/* Dark mode when OS prefers dark and no manual override */
+@media (prefers-color-scheme: dark) {
+  :root:not([color-scheme]) {
+    --gradient1: oklch(27% 3% 200);
+    --gradient2: oklch(25% 3% 220);
+    --nav-bg: rgba(50, 50, 50, 0.8);
+    --nav-bottom: oklch(50% 3% 200);
+    --nav-shadow: oklch(0% 0% 0 / 0.4);
+    --hero-h2: oklch(70% 5% 200);
+    --interest-tag: oklch(35% 3% 200);
+    --tag-border: oklch(40% 3% 200);
+    --tag-shadow: oklch(0% 0% 0 / 0.3);
+    --project-shadow: oklch(0% 0% 0 / 0.2);
+    --hover-shadow: oklch(0% 0% 0 / 0.7);
+    --project-border: oklch(35% 3% 200);
+    --project-color: oklch(25% 3% 200);
+    --project-text: oklch(90% 5% 200);
+    --body-bg: oklch(15% 3% 200);
+    --text-color: oklch(85% 5% 200);
+    --intro: oklch(85% 5% 200);
+  }
+}
+
 :root[color-scheme="light"] {
   --gradient1: oklch(100% 3% 200);
   --gradient2: oklch(98% 3% 220);

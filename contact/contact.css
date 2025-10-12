@@ -1,3 +1,20 @@
+/* Auto mode (respects OS preference) */
+:root:not([color-scheme]) {
+  --input-area: oklch(80% 3% 200);
+  --send-button: oklch(65% 3% 200);
+  --toast-shadow: oklch(0% 0% 0 / 0.2);
+}
+
+/* Dark mode when OS prefers dark and no manual override */
+@media (prefers-color-scheme: dark) {
+  :root:not([color-scheme]) {
+    --input-area: oklch(45% 3% 200);
+    --input-focused: oklch(from var(--color-accent) 45% c h);
+    --send-button: oklch(40% 3% 200);
+    --toast-shadow: oklch(0% 0% 0 / 0.7);
+  }
+}
+
 /* Manual overrides */
 :root[color-scheme="light"] {
   --input-area: oklch(80% 3% 200);

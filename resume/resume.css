@@ -1,3 +1,59 @@
+/* Auto mode (respects OS preference) */
+:root:not([color-scheme]) {
+  --h2-bottom: oklch(80% 3% 200);
+  --h3-text: black;
+  --inner-circle: white;
+  --card: white;
+  --card-shadow: oklch(0% 0% 0 / 0.1);
+  --card-border: oklch(90% 3% 200);
+  --hover-shadow: oklch(0% 0% 0 / 0.2);
+  --project-title: oklch(30% 5% 200);
+  --education-summary: oklch(50% 5% 200);
+  --classes: oklch(40% 5% 200);
+  --article: black;
+  --button-background: oklch(from var(--color-accent) 98% 3% h);
+
+  --skill-shadow: oklch(0% 0% 0 / 0.1);
+  --skill-bg-1: oklch(95% 10% 250);
+  --skill-color-1: oklch(30% 30% 250);
+  --skill-border-1: oklch(80% 20% 250);
+  --skill-bg-2: oklch(95% 15% 150);
+  --skill-color-2: oklch(30% 30% 150);
+  --skill-border-2: oklch(80% 20% 150);
+  --skill-bg-3: oklch(95% 15% 300);
+  --skill-color-3: oklch(30% 30% 300);
+  --skill-border-3: oklch(80% 20% 300);
+}
+
+/* Dark mode when OS prefers dark and no manual override */
+@media (prefers-color-scheme: dark) {
+  :root:not([color-scheme]) {
+    --h2-bottom: oklch(55% 3% 200);
+    --h3-text: oklch(85% 5% 200);
+    --inner-circle: white;
+    --card: oklch(25% 3% 200);
+    --card-shadow: oklch(0% 0% 0 / 0.2);
+    --card-border: oklch(35% 3% 200);
+    --hover-shadow: oklch(0% 0% 0 / 0.7);
+    --project-title: oklch(85% 5% 200);
+    --education-summary: oklch(85% 5% 200);
+    --classes: oklch(85% 5% 200);
+    --article: oklch(85% 5% 200);
+    --button-background: oklch(from var(--color-accent) 30% 20% h);
+
+    --skill-shadow: oklch(0% 0% 0 / 0.5);
+    --skill-bg-1: oklch(35% 20% 250);
+    --skill-color-1: oklch(90% 10% 250);
+    --skill-border-1: oklch(50% 20% 250);
+    --skill-bg-2: oklch(35% 20% 150);
+    --skill-color-2: oklch(90% 10% 150);
+    --skill-border-2: oklch(50% 20% 150);
+    --skill-bg-3: oklch(35% 20% 300);
+    --skill-color-3: oklch(90% 10% 300);
+    --skill-border-3: oklch(50% 20% 300);
+  }
+}
+
 /* Manual overrides */
 :root[color-scheme="light"] {
   --h2-bottom: oklch(80% 3% 200);

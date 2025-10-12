@@ -142,14 +142,12 @@ function addDarkModeSwitcher() {
       const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       toggle.checked = isDark;
       label.textContent = isDark ? 'Dark Mode' : 'Light Mode';
-      // Don't call applyColorScheme for auto - let CSS handle it
     }
   } else {
     // Default to auto
     const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     toggle.checked = isDark;
     label.textContent = isDark ? 'Dark Mode' : 'Light Mode';
-    // Don't call applyColorScheme for auto - let CSS handle it
   }
 
   toggle.addEventListener('change', function() {
@@ -157,7 +155,16 @@ function addDarkModeSwitcher() {
     applyColorScheme(scheme);
     localStorage.colorScheme = scheme;
     label.textContent = scheme === 'dark' ? 'Dark Mode' : 'Light Mode';
+    
+    // Update all external links with current theme
+    updateExternalLinks(scheme);
   });
+
+  // Initialize external links with current theme
+  const currentScheme = localStorage.colorScheme || 'auto';
+  if (currentScheme !== 'auto') {
+    updateExternalLinks(currentScheme);
+  }
 
   function applyColorScheme(scheme) {
     const html = document.documentElement;
@@ -168,5 +175,16 @@ function addDarkModeSwitcher() {
       html.setAttribute('color-scheme', scheme);
       html.style.setProperty('color-scheme', scheme);
     }
+  }
+
+  function updateExternalLinks(theme) {
+    // Update all external project links with theme parameter
+    document.querySelectorAll('a[href*="github.io"]').forEach(link => {
+      if (link.hostname !== window.location.hostname) {
+        const url = new URL(link.href);
+        url.searchParams.set('theme', theme);
+        link.href = url.toString();
+      }
+    });
   }
 }

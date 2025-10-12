@@ -1,3 +1,23 @@
+/* Auto mode (respects OS preference) */
+:root:not([color-scheme]) {
+  --project-card: white;
+  --text-color: black;
+  --card-shadow: oklch(0% 0% 0 / 0.1);
+  --card-border: oklch(97% 3% 200);
+  --hover-shadow: oklch(0% 0% 0 / 0.3);
+}
+
+/* Dark mode when OS prefers dark and no manual override */
+@media (prefers-color-scheme: dark) {
+  :root:not([color-scheme]) {
+    --project-card: oklch(25% 3% 200);
+    --text-color: oklch(85% 5% 200);
+    --card-shadow: oklch(0% 0% 0 / 0.2);
+    --card-border: oklch(35% 3% 200);
+    --hover-shadow: oklch(0% 0% 0 / 0.7);
+  }
+}
+
 /* Manual overrides */
 :root[color-scheme="light"] {
   --project-card: white;
