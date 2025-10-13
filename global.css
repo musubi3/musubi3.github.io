@@ -11,17 +11,13 @@
   --nav-bg: rgba(255, 255, 255, 0.8);
   --nav-bottom: oklch(80% 3% 200);
   --nav-shadow: oklch(0% 0% 0 / 0.2);
-  --hero-h2: oklch(50% 5% 200);
-  --interest-tag: oklch(95% 3% 200);
-  --tag-border: oklch(90% 3% 200);
-  --tag-shadow: oklch(0% 0% 0 / 0.1);
-  --project-shadow: oklch(0% 0% 0 / 0.1);
-  --hover-shadow: oklch(0% 0% 0 / 0.3);
-  --project-border: oklch(90% 3% 200);
-  --project-color: white;
-  --project-text: black;
-  --intro: black;
+  --h2-text: oklch(50% 5% 200);
   --text-color: black;
+
+  --card: white;
+  --card-shadow: oklch(0% 0% 0 / 0.1);
+  --card-border: oklch(90% 3% 200);
+  --card-hover: oklch(0% 0% 0 / 0.3);
 }
 
 /* Dark mode when OS prefers dark and no manual override */
@@ -32,17 +28,13 @@
     --nav-bg: rgba(50, 50, 50, 0.8);
     --nav-bottom: oklch(50% 3% 200);
     --nav-shadow: oklch(0% 0% 0 / 0.4);
-    --hero-h2: oklch(70% 5% 200);
-    --interest-tag: oklch(35% 3% 200);
-    --tag-border: oklch(40% 3% 200);
-    --tag-shadow: oklch(0% 0% 0 / 0.3);
-    --project-shadow: oklch(0% 0% 0 / 0.2);
-    --hover-shadow: oklch(0% 0% 0 / 0.7);
-    --project-border: oklch(35% 3% 200);
-    --project-color: oklch(25% 3% 200);
-    --project-text: oklch(90% 5% 200);
+    --h2-text: oklch(70% 5% 200);
     --text-color: oklch(85% 5% 200);
-    --intro: oklch(85% 5% 200);
+
+    --card: oklch(25% 3% 200);
+    --card-shadow: oklch(0% 0% 0 / 0.2);
+    --card-border: oklch(35% 3% 200);
+    --card-hover: oklch(0% 0% 0 / 0.7);
   }
 }
 
@@ -52,17 +44,13 @@
   --nav-bg: rgba(255, 255, 255, 0.8);
   --nav-bottom: oklch(80% 3% 200);
   --nav-shadow: oklch(0% 0% 0 / 0.2);
-  --hero-h2: oklch(50% 5% 200);
-  --interest-tag: oklch(95% 3% 200);
-  --tag-border: oklch(90% 3% 200);
-  --tag-shadow: oklch(0% 0% 0 / 0.1);
-  --project-shadow: oklch(0% 0% 0 / 0.1);
-  --hover-shadow: oklch(0% 0% 0 / 0.3);
-  --project-border: oklch(90% 3% 200);
-  --project-color: white;
-  --project-text: black;
-  --intro: black;
+  --h2-text: oklch(50% 5% 200);
   --text-color: black;
+
+  --card: white;
+  --card-shadow: oklch(0% 0% 0 / 0.1);
+  --card-border: oklch(90% 3% 200);
+  --card-hover: oklch(0% 0% 0 / 0.3);
 }
 
 :root[color-scheme="dark"] {
@@ -71,17 +59,13 @@
   --nav-bg: rgba(50, 50, 50, 0.8);
   --nav-bottom: oklch(50% 3% 200);
   --nav-shadow: oklch(0% 0% 0 / 0.4);
-  --hero-h2: oklch(70% 5% 200);
-  --interest-tag: oklch(35% 3% 200);
-  --tag-border: oklch(40% 3% 200);
-  --tag-shadow: oklch(0% 0% 0 / 0.3);
-  --project-shadow: oklch(0% 0% 0 / 0.2);
-  --hover-shadow: oklch(0% 0% 0 / 0.7);
-  --project-border: oklch(35% 3% 200);
-  --project-color: oklch(25% 3% 200);
-  --project-text: oklch(90% 5% 200);
+  --h2-text: oklch(70% 5% 200);
   --text-color: oklch(85% 5% 200);
-  --intro: oklch(85% 5% 200);
+
+  --card: oklch(25% 3% 200);
+  --card-shadow: oklch(0% 0% 0 / 0.2);
+  --card-border: oklch(35% 3% 200);
+  --card-hover: oklch(0% 0% 0 / 0.7);
 }
 
 html {
@@ -90,9 +74,6 @@ html {
 }
 
 body {
-  /* Set line height to 1.5 times the font size
-	   and use the OS’s UI font as the website font
-	 */
   font: 100%/1.5 system-ui;
   margin-top: 0;
   background: linear-gradient(135deg, var(--gradient1) 0%, var(--gradient2) 100%);
@@ -247,7 +228,7 @@ h1 {
 
 h2 {
   font-size: 200%;
-  color: var(--hero-h2);
+  color: var(--h2-text);
 }
 
 h3 {

@@ -3,14 +3,8 @@
   --h2-bottom: oklch(80% 3% 200);
   --h3-text: black;
   --inner-circle: white;
-  --card: white;
-  --card-shadow: oklch(0% 0% 0 / 0.1);
-  --card-border: oklch(90% 3% 200);
-  --hover-shadow: oklch(0% 0% 0 / 0.2);
   --project-title: oklch(30% 5% 200);
   --education-summary: oklch(50% 5% 200);
-  --classes: oklch(40% 5% 200);
-  --article: black;
   --button-background: oklch(from var(--color-accent) 98% 3% h);
 
   --skill-shadow: oklch(0% 0% 0 / 0.1);
@@ -31,14 +25,8 @@
     --h2-bottom: oklch(55% 3% 200);
     --h3-text: oklch(85% 5% 200);
     --inner-circle: oklch(15% 5% 200);
-    --card: oklch(25% 3% 200);
-    --card-shadow: oklch(0% 0% 0 / 0.2);
-    --card-border: oklch(35% 3% 200);
-    --hover-shadow: oklch(0% 0% 0 / 0.7);
     --project-title: oklch(85% 5% 200);
-    --education-summary: oklch(85% 5% 200);
-    --classes: oklch(85% 5% 200);
-    --article: oklch(85% 5% 200);
+    --education-summary: oklch(70% 5% 200);
     --button-background: oklch(from var(--color-accent) 30% 20% h);
 
     --skill-shadow: oklch(0% 0% 0 / 0.5);
@@ -59,14 +47,8 @@
   --h2-bottom: oklch(80% 3% 200);
   --h3-text: black;
   --inner-circle: white;
-  --card: white;
-  --card-shadow: oklch(0% 0% 0 / 0.1);
-  --card-border: oklch(90% 3% 200);
-  --hover-shadow: oklch(0% 0% 0 / 0.2);
   --project-title: oklch(30% 5% 200);
   --education-summary: oklch(50% 5% 200);
-  --classes: oklch(40% 5% 200);
-  --article: black;
   --button-background: oklch(from var(--color-accent) 98% 3% h);
 
   --skill-shadow: oklch(0% 0% 0 / 0.1);
@@ -85,12 +67,8 @@
   --h2-bottom: oklch(55% 3% 200);
   --h3-text: oklch(85% 5% 200);
   --inner-circle: oklch(15% 5% 200);
-  --card: oklch(25% 3% 200);
-  --card-shadow: oklch(0% 0% 0 / 0.2);
-  --card-border: oklch(35% 3% 200);
-  --hover-shadow: oklch(0% 0% 0 / 0.7);
   --project-title: oklch(85% 5% 200);
-  --education-summary: oklch(85% 5% 200);
+  --education-summary: oklch(70% 5% 200);
   --classes: oklch(85% 5% 200);
   --article: oklch(85% 5% 200);
   --button-background: oklch(from var(--color-accent) 30% 20% h);
@@ -192,7 +170,7 @@
 }
 
 article {
-  color: var(--article);
+  color: var(--text-color);
 }
 
 /* TIMELINE EDUCATION */
@@ -246,7 +224,7 @@ article {
 }
 
 .resume-projects article:hover {
-  box-shadow: 0 4px 12px var(--hover-shadow);
+  box-shadow: 0 4px 12px var(--card-hover);
   transform: translateY(-2px) !important;
 }
 
@@ -328,7 +306,7 @@ article {
 .resume ul.course-list li {
   margin-bottom: 0.2em;
   font-size: 0.9em;
-  color: var(--classes);
+  color: var(--text-color);
   list-style-type: disc;
 }
 

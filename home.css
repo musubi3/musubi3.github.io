@@ -1,13 +1,8 @@
 /* Auto mode (respects OS preference) */
 :root:not([color-scheme]) {
-  --hero-h2: oklch(50% 5% 200);
   --interest-tag: oklch(95% 3% 200);
   --tag-border: oklch(90% 3% 200);
   --tag-shadow: oklch(0% 0% 0 / 0.1);
-  --project-shadow: oklch(0% 0% 0 / 0.1);
-  --hover-shadow: oklch(0% 0% 0 / 0.3);
-  --project-border: oklch(90% 3% 200);
-  --project-color: white;
   --project-text: black;
   --intro: black;
   --text-color: black;
@@ -16,14 +11,9 @@
 /* Dark mode when OS prefers dark and no manual override */
 @media (prefers-color-scheme: dark) {
   :root:not([color-scheme]) {
-    --hero-h2: oklch(70% 5% 200);
     --interest-tag: oklch(35% 3% 200);
     --tag-border: oklch(40% 3% 200);
     --tag-shadow: oklch(0% 0% 0 / 0.3);
-    --project-shadow: oklch(0% 0% 0 / 0.2);
-    --hover-shadow: oklch(0% 0% 0 / 0.7);
-    --project-border: oklch(35% 3% 200);
-    --project-color: oklch(25% 3% 200);
     --project-text: oklch(90% 5% 200);
     --text-color: oklch(85% 5% 200);
     --intro: oklch(85% 5% 200);
@@ -31,28 +21,18 @@
 }
 
 :root[color-scheme="light"] {
-  --hero-h2: oklch(50% 5% 200);
   --interest-tag: oklch(95% 3% 200);
   --tag-border: oklch(90% 3% 200);
   --tag-shadow: oklch(0% 0% 0 / 0.1);
-  --project-shadow: oklch(0% 0% 0 / 0.1);
-  --hover-shadow: oklch(0% 0% 0 / 0.3);
-  --project-border: oklch(90% 3% 200);
-  --project-color: white;
   --project-text: black;
   --intro: black;
   --text-color: black;
 }
 
 :root[color-scheme="dark"] {
-  --hero-h2: oklch(70% 5% 200);
   --interest-tag: oklch(35% 3% 200);
   --tag-border: oklch(40% 3% 200);
   --tag-shadow: oklch(0% 0% 0 / 0.3);
-  --project-shadow: oklch(0% 0% 0 / 0.2);
-  --hover-shadow: oklch(0% 0% 0 / 0.7);
-  --project-border: oklch(35% 3% 200);
-  --project-color: oklch(25% 3% 200);
   --project-text: oklch(90% 5% 200);
   --text-color: oklch(85% 5% 200);
   --intro: oklch(85% 5% 200);
@@ -100,7 +80,6 @@
 
 .home h2 {
   font-size: 1.5em;
-  color: var(--hero-h2);
   margin-bottom: 1em;
 }
 
@@ -156,21 +135,21 @@
 }
 
 .project-highlight {
-  background: var(--project-color);
+  background: var(--card);
   padding: 0 1em;
   height: 8em;
   border-radius: 12px;
   border-left: 4px solid var(--color-accent);
-  box-shadow: 0 4px 12px var(--project-shadow);
-  border-right: 1px solid var(--project-border);
-  border-top: 1px solid var(--project-border);
-  border-bottom: 1px solid var(--project-border);
+  box-shadow: 0 4px 12px var(--card-shadow);
+  border-right: 1px solid var(--card-border);
+  border-top: 1px solid var(--card-border);
+  border-bottom: 1px solid var(--card-border);
   transition: all 0.2s ease;
 }
 
 .project-highlight:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px var(--hover-shadow);
+  box-shadow: 0 4px 12px var(--card-hover);
 }
 
 .quick-stats {
