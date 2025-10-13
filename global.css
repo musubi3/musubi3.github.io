@@ -345,6 +345,8 @@ strong {
 }
 
 .tag {
+  padding: 0.5em 1em;
+  border-radius: 25px;
   background: var(--tag);
   border: 1px solid var(--tag-border);
   color: var(--tag-text);
