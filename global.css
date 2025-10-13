@@ -8,11 +8,24 @@
 :root:not([color-scheme]) {
   --gradient1: oklch(100% 3% 200);
   --gradient2: oklch(98% 3% 220);
+
   --nav-bg: rgba(255, 255, 255, 0.8);
   --nav-bottom: oklch(80% 3% 200);
   --nav-shadow: oklch(0% 0% 0 / 0.2);
+
   --h2-text: oklch(50% 5% 200);
+  --h2-bottom: oklch(80% 3% 200);
+
+  --code: oklch(from var(--color-accent) 96% 3% h);
   --text-color: black;
+
+  --link: oklch(from var(--color-accent) 65% c h);
+  --link-hover: oklch(from var(--color-accent) 80% c h);
+
+  --toc: oklch(from var(--color-accent) 96% 3% h);
+  --tag: oklch(from var(--color-accent) 95% 5% h);
+  --tag-text: oklch(from var(--color-accent) 55% c h);
+  --tag-hover: oklch(from var(--color-accent) 90% 5% h);
 
   --card: white;
   --card-shadow: oklch(0% 0% 0 / 0.1);
@@ -25,11 +38,24 @@
   :root:not([color-scheme]) {
     --gradient1: oklch(27% 3% 200);
     --gradient2: oklch(25% 3% 220);
+
     --nav-bg: rgba(50, 50, 50, 0.8);
     --nav-bottom: oklch(50% 3% 200);
     --nav-shadow: oklch(0% 0% 0 / 0.4);
+
     --h2-text: oklch(70% 5% 200);
+    --h2-bottom: oklch(55% 3% 200);
+
+    --code: oklch(from var(--color-accent) 35% 10% h);
     --text-color: oklch(85% 5% 200);
+
+    --link: oklch(from var(--color-accent) 80% c h);
+    --link-hover: oklch(from var(--color-accent) 95% c h);
+
+    --toc: oklch(from var(--color-accent) 29% 3% h);
+    --tag: oklch(from var(--color-accent) 30% 10% h);
+    --tag-text: var(--color-accent);
+    --tag-hover: oklch(from var(--color-accent) 55% c h);
 
     --card: oklch(25% 3% 200);
     --card-shadow: oklch(0% 0% 0 / 0.2);
@@ -41,11 +67,24 @@
 :root[color-scheme="light"] {
   --gradient1: oklch(100% 3% 200);
   --gradient2: oklch(98% 3% 220);
+
   --nav-bg: rgba(255, 255, 255, 0.8);
   --nav-bottom: oklch(80% 3% 200);
   --nav-shadow: oklch(0% 0% 0 / 0.2);
+
   --h2-text: oklch(50% 5% 200);
+  --h2-bottom: oklch(80% 3% 200);
+
+  --code: oklch(from var(--color-accent) 96% 3% h);
   --text-color: black;
+
+  --link: oklch(from var(--color-accent) 65% c h);
+  --link-hover: oklch(from var(--color-accent) 80% c h);
+
+  --toc: oklch(from var(--color-accent) 96% 3% h);
+  --tag: oklch(from var(--color-accent) 95% 5% h);
+  --tag-text: oklch(from var(--color-accent) 55% c h);
+  --tag-hover: oklch(from var(--color-accent) 90% 5% h);
 
   --card: white;
   --card-shadow: oklch(0% 0% 0 / 0.1);
@@ -56,11 +95,24 @@
 :root[color-scheme="dark"] {
   --gradient1: oklch(27% 3% 200);
   --gradient2: oklch(25% 3% 220);
+
   --nav-bg: rgba(50, 50, 50, 0.8);
   --nav-bottom: oklch(50% 3% 200);
   --nav-shadow: oklch(0% 0% 0 / 0.4);
+
   --h2-text: oklch(70% 5% 200);
+  --h2-bottom: oklch(55% 3% 200);
+
+  --code: oklch(from var(--color-accent) 35% 10% h);
   --text-color: oklch(85% 5% 200);
+
+  --link: oklch(from var(--color-accent) 80% c h);
+  --link-hover: oklch(from var(--color-accent) 95% c h);
+
+  --toc: oklch(from var(--color-accent) 29% 3% h);
+  --tag: oklch(from var(--color-accent) 30% 10% h);
+  --tag-text: var(--color-accent);
+  --tag-hover: oklch(from var(--color-accent) 55% c h);
 
   --card: oklch(25% 3% 200);
   --card-shadow: oklch(0% 0% 0 / 0.2);
@@ -86,6 +138,7 @@ body {
 .content {
   max-width: var(--max-width);
   margin-inline: max(1em, (100% - var(--max-width)) / 2);
+  color: var(--text-color);
 }
 
 .nav-wrapper {
@@ -242,6 +295,20 @@ h4 {
 h5,
 h6 {
   font-size: 110%;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+strong {
+  color: var(--link);
 }
 
 /* Hide hamburger menu by default (desktop) */

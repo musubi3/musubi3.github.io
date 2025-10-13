@@ -1,6 +1,5 @@
 /* Auto mode (respects OS preference) */
 :root:not([color-scheme]) {
-  --h2-bottom: oklch(80% 3% 200);
   --h3-text: black;
   --inner-circle: white;
   --project-title: oklch(30% 5% 200);
@@ -22,7 +21,6 @@
 /* Dark mode when OS prefers dark and no manual override */
 @media (prefers-color-scheme: dark) {
   :root:not([color-scheme]) {
-    --h2-bottom: oklch(55% 3% 200);
     --h3-text: oklch(85% 5% 200);
     --inner-circle: oklch(15% 5% 200);
     --project-title: oklch(85% 5% 200);
@@ -44,7 +42,6 @@
 
 /* Manual overrides */
 :root[color-scheme="light"] {
-  --h2-bottom: oklch(80% 3% 200);
   --h3-text: black;
   --inner-circle: white;
   --project-title: oklch(30% 5% 200);
@@ -64,7 +61,6 @@
 }
 
 :root[color-scheme="dark"] {
-  --h2-bottom: oklch(55% 3% 200);
   --h3-text: oklch(85% 5% 200);
   --inner-circle: oklch(15% 5% 200);
   --project-title: oklch(85% 5% 200);
@@ -321,10 +317,6 @@ article {
 
 .resume li {
   margin-bottom: 0.5em;
-}
-
-.resume strong {
-  color: var(--color-accent);
 }
 
 .view-project {
