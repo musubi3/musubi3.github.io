@@ -342,6 +342,7 @@ strong {
 
 .tag {
   background: var(--tag);
+  border: 1px solid var(--tag-text);
   color: var(--tag-text);
 }
 
