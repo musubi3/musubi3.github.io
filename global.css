@@ -30,7 +30,7 @@
 
   --card: white;
   --card-shadow: oklch(0% 0% 0 / 0.1);
-  --card-border: oklch(90% 3% 200);
+  --card-border: oklch(85% 3% 200);
   --card-hover: oklch(0% 0% 0 / 0.3);
 }
 
@@ -61,7 +61,7 @@
 
     --card: oklch(25% 3% 200);
     --card-shadow: oklch(0% 0% 0 / 0.2);
-    --card-border: oklch(35% 3% 200);
+    --card-border: oklch(40% 10% 200);
     --card-hover: oklch(0% 0% 0 / 0.7);
   }
 }
@@ -91,7 +91,7 @@
 
   --card: white;
   --card-shadow: oklch(0% 0% 0 / 0.1);
-  --card-border: oklch(90% 3% 200);
+  --card-border: oklch(85% 3% 200);
   --card-hover: oklch(0% 0% 0 / 0.3);
 }
 
@@ -120,7 +120,7 @@
 
   --card: oklch(25% 3% 200);
   --card-shadow: oklch(0% 0% 0 / 0.2);
-  --card-border: oklch(35% 3% 200);
+  --card-border: oklch(40% 10% 200);
   --card-hover: oklch(0% 0% 0 / 0.7);
 }
 
