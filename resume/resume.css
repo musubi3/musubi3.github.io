@@ -308,25 +308,25 @@ article {
 }
 
 .view-project {
-  color: var(--color-accent);
+  color: var(--tag-text);
   text-decoration: none;
   font-weight: 500;
   padding: 0.5em 1em;
   border-radius: 8px;
-  border: 1px solid;
-  background-color: var(--button-background);
+  border: 1px solid var(--tag-border);
+  background: var(--tag);
   transition: all 0.2s ease;
 }
 
 .view-project:hover {
   color: white;
-  background-color: var(--color-accent);
+  background-color: var(--tag-hover);
 }
 
 .view-project:active,
 .view-project:focus {
-  color: var(--color-accent);
-  background-color: var(--button-background);
+  color: var(--tag-text);
+  background: var(--tag);
 }
 
 /* MOBILE */

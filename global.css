@@ -26,7 +26,7 @@
   --tag: oklch(from var(--color-accent) 95% 5% h);
   --tag-text: oklch(from var(--color-accent) 55% c h);
   --tag-border: oklch(from var(--color-accent) 90% 5% h);
-  --tag-hover: oklch(from var(--color-accent) 90% 5% h);
+  --tag-hover: var(--color-accent);
 
   --card: white;
   --card-shadow: oklch(0% 0% 0 / 0.1);
@@ -93,7 +93,7 @@
   --tag: oklch(from var(--color-accent) 95% 5% h);
   --tag-text: oklch(from var(--color-accent) 55% c h);
   --tag-border: oklch(from var(--color-accent) 90% 5% h);
-  --tag-hover: oklch(from var(--color-accent) 90% 5% h);
+  --tag-hover: var(--color-accent);
 
   --card: white;
   --card-shadow: oklch(0% 0% 0 / 0.1);
