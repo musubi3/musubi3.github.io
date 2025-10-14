@@ -382,11 +382,6 @@ code {
 }
 
 @media (max-width: 768px) {
-  .hero-image img {
-    width: 100%;
-    height: auto;
-  }
-
   .nav-wrapper {
     position: sticky;
     top: 0;
