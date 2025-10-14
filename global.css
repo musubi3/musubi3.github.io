@@ -32,6 +32,9 @@
   --card-shadow: oklch(0% 0% 0 / 0.1);
   --card-border: oklch(85% 3% 200);
   --card-hover: oklch(0% 0% 0 / 0.3);
+
+  --table-hover: oklch(from var(--color-accent) 99% 3% h);
+  --column-text: oklch(30% 5% 200);
 }
 
 /* Dark mode when OS prefers dark and no manual override */
@@ -63,6 +66,9 @@
     --card-shadow: oklch(0% 0% 0 / 0.2);
     --card-border: oklch(35% 3% 200);
     --card-hover: oklch(0% 0% 0 / 0.7);
+
+    --table-hover: oklch(from var(--color-accent) 30% 10% h);
+    --column-text: oklch(85% 5% 200);
   }
 }
 
@@ -93,6 +99,9 @@
   --card-shadow: oklch(0% 0% 0 / 0.1);
   --card-border: oklch(85% 3% 200);
   --card-hover: oklch(0% 0% 0 / 0.3);
+
+  --table-hover: oklch(from var(--color-accent) 99% 3% h);
+  --column-text: oklch(30% 5% 200);
 }
 
 :root[color-scheme="dark"] {
@@ -122,6 +131,9 @@
   --card-shadow: oklch(0% 0% 0 / 0.2);
   --card-border: oklch(35% 3% 200);
   --card-hover: oklch(0% 0% 0 / 0.7);
+
+  --table-hover: oklch(from var(--color-accent) 30% 10% h);
+  --column-text: oklch(85% 5% 200);
 }
 
 html {
@@ -301,6 +313,29 @@ h6 {
   font-size: 110%;
 }
 
+.project-detail h2 {
+  border-bottom: 2px solid var(--h2-bottom);
+  padding-bottom: 0.5em;
+  margin-bottom: 1.5em;
+  font-size: 1.8em;
+}
+
+.project-header {
+  text-align: center;
+  margin-bottom: 2em;
+  padding-bottom: 1em;
+  border-bottom: 2px solid var(--h2-bottom);
+}
+
+.project-author {
+  font-weight: 500;
+  font-size: large;
+}
+
+.project-section {
+  margin: 3em 0;
+}
+
 a {
   color: var(--link);
   text-decoration: none;
@@ -367,6 +402,34 @@ code {
 .card:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px var(--card-hover);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px var(--card-shadow);
+  border: 1px solid var(--card-border)
+}
+
+th,
+td {
+  padding: 0.75em 1em;
+  text-align: left;
+  border-bottom: 1px solid var(--card-border);
+}
+
+th {
+  background: var(--code);
+  font-weight: 600;
+  color: var(--column-text);
+}
+
+tr:hover {
+  transition: all 0.2s ease;
+  background: var(--table-hover);
 }
 
 /* MOBILE */
