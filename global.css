@@ -315,6 +315,11 @@ strong {
   color: var(--link);
 }
 
+code {
+  background: var(--code);
+  border-radius: 5px;
+}
+
 .toc {
   background: var(--toc);
   padding: 1.5em;
