@@ -332,6 +332,11 @@ h6 {
   font-size: large;
 }
 
+.project-date,
+.project-category {
+  margin: 0.2em;
+}
+
 .project-section {
   margin: 3em 0;
 }
