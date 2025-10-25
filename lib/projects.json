@@ -1,0 +1,20 @@
+[
+    {
+        "title": "The Relationship Between Calories and Recipe Rating",
+        "image": "https://store.cofo.edu/cdn/shop/files/cookbookopen.png?v=1696951540",
+        "description": "A data-driven analysis exploring how calories impact average recipe ratings, using Python and\n                        interactive plots.",
+        "link": "https://musubi3.github.io/recipe-calories-relationship/?theme=dark"
+    },
+    {
+        "title": "Wave",
+        "image": "https://i.postimg.cc/SNkLqJfF/gameplay.png",
+        "description": "A simple 2D game I developed during my junior year of high school.",
+        "link": "https://musubi3.github.io/Wave/?theme=dark"
+    },
+    {
+        "title": "pokemon.js",
+        "image": "https://assets1.ignimgs.com/2018/03/31/newgraphicsapr2018-1522532501148_160w.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "description": "A Node.js module that makes interacting with PokéAPI easier.",
+        "link": "https://musubi3.github.io/pokemon.js/?theme=dark"
+    }
+]

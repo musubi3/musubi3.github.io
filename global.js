@@ -3,7 +3,6 @@ try { navigator.mediaSession?.setActionHandler('enterpictureinpicture', null); }
 
 // AUTOMATIC NAV
 function $$(selector) {
-  console.log('IT’S ALIVE!');
   return Array.from(document.querySelectorAll(selector));
 }
 
@@ -59,9 +58,6 @@ document.addEventListener('DOMContentLoaded', function () {
     let a = document.createElement('a');
     a.href = url;
     a.textContent = title;
-
-    // Highlight current page
-    console.log(window.location.pathname);
 
     if ((a.host === location.host && a.pathname === location.pathname) || (p.title === 'Home' && window.location.pathname === '/')) {
       a.classList.add('current');
@@ -189,4 +185,59 @@ function addDarkModeSwitcher() {
       }
     });
   }
+}
+
+/**
+ * Fetches JSON data from a given URL.
+ * @param {string} url - The URL to fetch the JSON data from.
+ * @returns {Promise<Object>} A promise that resolves to the JSON data.
+ */
+ export async function fetchJSON(url) {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`Failed to fetch projects: ${response.statusText}`);
+        }
+        return await response.json();
+    } catch (error) {
+        console.error('Error fetching or parsing JSON data:', error);
+        return null;
+    }
+}
+
+/**
+ * Renders an array of projects into a specified container element.
+ * @param {Array<Object>} projects - The array of project objects to render.
+ * @param {HTMLElement} containerElement - The container to render the projects in.
+ * @param {string} headingLevel - The heading level (e.g., 'h3') for project titles.
+ */
+export function renderProjects(projects, containerElement, headingLevel = 'h3') {
+  containerElement.innerHTML = '';
+
+  for (const project of projects) {
+    const link = document.createElement('a');
+    link.href = project.link;
+
+    link.innerHTML = `
+      <article class="card project-card">
+        <${headingLevel}>${project.title}</${headingLevel}>
+        <div class="project-image-container">
+          <img src="${project.image}" alt="Screenshot of ${project.title}" class="project-image">
+        </div>
+        <p>${project.description}</p>
+      </article>
+    `;
+
+    // Append the complete link (with the article inside) to the container
+    containerElement.appendChild(link);
+  }
+}
+
+/**
+ * Fetches public data for a GitHub user.
+ * @param {string} username - The GitHub username to look up.
+ * @returns {Promise<Object>} A promise that resolves to the user's data.
+ */
+export async function fetchGitHubData(username='musubi3') {
+  return fetchJSON(`https://api.github.com/users/${username}`);
 }

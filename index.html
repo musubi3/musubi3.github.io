@@ -9,7 +9,8 @@
     <title>Justin Lee: Personal site and portfolio</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
-    <script src="global.js"></script>
+    <script src="global.js" type="module"></script>
+    <script src="home.js" type="module"></script>
 </head>
 
 <body>
@@ -28,29 +29,25 @@
             <span class="interest-tag">🏀 Sports Analytics</span>
             <span class="interest-tag">🐍 Python</span>
         </div>
-        
+
         <div class="hero-image">
             <img src="https://i.postimg.cc/YS1j2YCJ/IMG-7428.jpg" alt="A photo of me in front of Geisel library at UCSD"
                 height="600px">
         </div>
 
         <section class="featured-projects">
-            <h2>Featured Projects</h2>
-            <div class="projects-preview">
-                <a href="https://musubi3.github.io/recipe-calories-relationship">
-                    <div class="card project-highlight">
-                        <h3>Recipe Analysis</h3>
-                        <p>Exploring how calories impact recipe ratings</p>
-                    </div>
-                </a>
-                <a href="https://musubi3.github.io/Wave">
-                    <div class="card project-highlight">
-                        <h3>Wave Game</h3>
-                        <p>A 2D game built in Java</p>
-                    </div>
-                </a>
+            <h2>Latest Projects</h2>
+            <div class="projects">
             </div>
         </section>
+
+        <div class="github-container">
+            <section class="github-stats">
+                <h2>GitHub Stats</h2>
+                <div id="profile-stats">
+                </div>
+            </section>
+        </div>
 
         <section class="quick-stats">
             <div class="stat">
