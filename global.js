@@ -178,11 +178,10 @@ function addDarkModeSwitcher() {
   function updateExternalLinks(theme) {
     // Update all external project links with theme parameter
     document.querySelectorAll('a[href*="github.io"]').forEach(link => {
-      if (link.hostname !== window.location.hostname) {
-        const url = new URL(link.href);
-        url.searchParams.set('theme', theme);
-        link.href = url.toString();
-      }
+      // No 'if' check is needed here
+      const url = new URL(link.href);
+      url.searchParams.set('theme', theme);
+      link.href = url.toString();
     });
   }
 }
@@ -192,17 +191,17 @@ function addDarkModeSwitcher() {
  * @param {string} url - The URL to fetch the JSON data from.
  * @returns {Promise<Object>} A promise that resolves to the JSON data.
  */
- export async function fetchJSON(url) {
-    try {
-        const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error(`Failed to fetch projects: ${response.statusText}`);
-        }
-        return await response.json();
-    } catch (error) {
-        console.error('Error fetching or parsing JSON data:', error);
-        return null;
+export async function fetchJSON(url) {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Failed to fetch projects: ${response.statusText}`);
     }
+    return await response.json();
+  } catch (error) {
+    console.error('Error fetching or parsing JSON data:', error);
+    return null;
+  }
 }
 
 /**
@@ -238,6 +237,6 @@ export function renderProjects(projects, containerElement, headingLevel = 'h3') 
  * @param {string} username - The GitHub username to look up.
  * @returns {Promise<Object>} A promise that resolves to the user's data.
  */
-export async function fetchGitHubData(username='musubi3') {
+export async function fetchGitHubData(username = 'musubi3') {
   return fetchJSON(`https://api.github.com/users/${username}`);
 }
