@@ -97,14 +97,13 @@
   background: var(--input);
   color: var(--input-text);
   border-radius: 8px;
-  min-width: 110px;
+  min-width: 124px;
 }
 
 .custom-select-trigger {
   border: 1px solid var(--input-border);
   background: var(--input);
   border-radius: 8px;
-  background-color: var(--input-background, transparent);
   padding: 0.75em 1em;
   cursor: pointer;
 
@@ -143,9 +142,10 @@
   transform: translateY(-10px);
   transition: all 0.2s ease;
   z-index: 10;
+
+  overscroll-behavior: contain;
 }
 
-/* This class will be added by JS to show the panel */
 .custom-options.open {
   visibility: visible;
   opacity: 1;
@@ -157,7 +157,6 @@
   transform: rotate(180deg);
 }
 
-/* This is each individual option */
 .custom-option {
   padding: 0.75em 1em;
   cursor: pointer;
@@ -165,7 +164,23 @@
 
 .custom-option:hover {
   background-color: color-mix(in oklch, color-mix(in oklch, var(--color-accent, oklch(65% 50% 200)), canvas 50%) 65%, transparent);
-  /* Highlight on hover */
+}
+
+.custom-options::-webkit-scrollbar {
+  width: 5px;
+}
+
+.custom-options::-webkit-scrollbar-track {
+  border-radius: 16px;
+}
+
+.custom-options::-webkit-scrollbar-thumb {
+  background-color: var(--scroll);
+  border-radius: 8px;
+}
+
+.custom-options::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scroll-hover);
 }
 
 .content>* {
@@ -181,5 +196,12 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .custom-select-wrapper {
+    min-width: 110px;
   }
 }

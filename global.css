@@ -42,6 +42,9 @@
   --input-focused: oklch(from var(--color-accent) 80% c h);
   --input-placeholder: oklch(40% 3% 200);
   --input-options: rgba(255, 255, 255, 0.8);
+
+  --scroll: oklch(80% 0 360 / 0.7);
+  --scroll-hover: oklch(70% 0 360 / 0.7);
 }
 
 /* Dark mode when OS prefers dark and no manual override */
@@ -83,6 +86,9 @@
     --input-focused: oklch(from var(--color-accent) 45% c h);
     --input-placeholder: oklch(70% 3% 200);
     --input-options: rgba(58, 58, 58, 0.8);
+
+    --scroll: oklch(55% 0 360 / 0.7);
+    --scroll-hover: oklch(65% 0 360 / 0.7);
   }
 }
 
@@ -123,6 +129,9 @@
   --input-focused: oklch(from var(--color-accent) 80% c h);
   --input-placeholder: oklch(40% 3% 200);
   --input-options: rgba(255, 255, 255, 0.8);
+
+  --scroll: oklch(80% 0 360 / 0.7);
+  --scroll-hover: oklch(70% 0 360 / 0.7);
 }
 
 :root[color-scheme="dark"] {
@@ -162,6 +171,9 @@
   --input-focused: oklch(from var(--color-accent) 45% c h);
   --input-placeholder: oklch(70% 3% 200);
   --input-options: rgba(58, 58, 58, 0.8);
+
+  --scroll: oklch(55% 0 360 / 0.7);
+  --scroll-hover: oklch(65% 0 360 / 0.7);
 }
 
 html {
