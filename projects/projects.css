@@ -57,11 +57,118 @@
 .project-card p {
   margin: 0;
   flex-grow: 1;
-  /* Push everything to take equal space */
   line-height: 1.5;
 }
 
-.content > * {
+/* --- Styles for Filter Container --- */
+.filter-container {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 2em;
+}
+
+.searchBar {
+  flex: 1;
+  width: 100%;
+  padding: 0.75em 1em;
+  font-size: 1em;
+  background: var(--input);
+  color: var(--input-text);
+  border: 1px solid var(--input-border);
+  border-radius: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.searchBar::placeholder {
+  color: var(--input-placeholder);
+}
+
+.searchBar:focus,
+.yearFilter:focus {
+  outline: none
+}
+
+.custom-select-wrapper {
+  position: relative;
+  display: inline-block;
+  font-size: 1em;
+  background: var(--input);
+  color: var(--input-text);
+  border-radius: 8px;
+  min-width: 110px;
+}
+
+.custom-select-trigger {
+  border: 1px solid var(--input-border);
+  background: var(--input);
+  border-radius: 8px;
+  background-color: var(--input-background, transparent);
+  padding: 0.75em 1em;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.custom-select-trigger .arrow {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid var(--input-text);
+  transition: transform 0.2s ease;
+}
+
+/* This is the floating panel */
+.custom-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 10px;
+
+  border: 1px solid var(--input-border);
+  border-radius: 8px;
+  background-color: var(--input-options);
+  backdrop-filter: blur(2px);
+
+  max-height: 200px;
+  overflow-y: auto;
+
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+/* This class will be added by JS to show the panel */
+.custom-options.open {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Flip the arrow when open */
+.custom-select-wrapper.open .arrow {
+  transform: rotate(180deg);
+}
+
+/* This is each individual option */
+.custom-option {
+  padding: 0.75em 1em;
+  cursor: pointer;
+}
+
+.custom-option:hover {
+  background-color: color-mix(in oklch, color-mix(in oklch, var(--color-accent, oklch(65% 50% 200)), canvas 50%) 65%, transparent);
+  /* Highlight on hover */
+}
+
+.content>* {
   animation: fadeInUp 0.6s ease-out;
 }
 
