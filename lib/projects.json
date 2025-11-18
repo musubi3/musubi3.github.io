@@ -1,5 +1,13 @@
 [
     {
+        "title": "44,000 Riders, Zero Trains: A Case for the Geary Subway",
+        "image": "https://i.postimg.cc/k5brnKgT/image-2025-11-18-002218564.png",
+        "description": "A data-driven analysis (Python, D3.js) proving why the Geary corridor, with 44,000+ daily riders, is the most underserved transit route in San Francisco.",
+        "link": "https://musubi3.github.io/sfmta-geary-subway",
+        "year": "2025",
+        "tags": ["Personal", "Python", "pandas", "JavaScript", "D3.js"]
+    },
+    {
         "title": "Visualizing Boston's Bike Share Network",
         "image": "https://i.postimg.cc/fb2P1RMn/image-2025-11-14-210141226.png",
         "description": "This interactive map visualizes the Boston and Cambridge BlueBikes network, allowing users to explore how bike traffic volume and flow change throughout the day.",
@@ -18,7 +26,7 @@
     {
         "title": "The Relationship Between Calories and Recipe Rating",
         "image": "https://store.cofo.edu/cdn/shop/files/cookbookopen.png?v=1696951540",
-        "description": "A data-driven analysis exploring how calories impact average recipe ratings, using Python and\n                        interactive plots.",
+        "description": "A data-driven analysis exploring how calories impact average recipe ratings, using Python and interactive plots.",
         "link": "https://musubi3.github.io/recipe-calories-relationship/?theme=dark",
         "year": "2025",
         "tags": ["School", "Python", "pandas", "plotly", "scikit-learn"]
