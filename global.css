@@ -356,7 +356,7 @@ h6 {
 .project-detail h2 {
   border-bottom: 2px solid var(--h2-bottom);
   padding-bottom: 0.5em;
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
   font-size: 1.8em;
 }
 
