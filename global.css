@@ -41,7 +41,7 @@
   --input-border: oklch(85% 3% 200);
   --input-focused: oklch(from var(--color-accent) 80% c h);
   --input-placeholder: oklch(40% 3% 200);
-  --input-options: rgba(255, 255, 255, 0.8);
+  --input-options: rgba(255, 255, 255, 0.85);
 
   --scroll: oklch(80% 0 360 / 0.7);
   --scroll-hover: oklch(70% 0 360 / 0.7);
@@ -85,7 +85,7 @@
     --input-border: none;
     --input-focused: oklch(from var(--color-accent) 45% c h);
     --input-placeholder: oklch(70% 3% 200);
-    --input-options: oklch(35% 4% 200 / 0.8);
+    --input-options: oklch(35% 4% 200 / 0.9);
 
     --scroll: oklch(55% 4% 200 / 0.7);
     --scroll-hover: oklch(65% 4% 200 / 0.7);
@@ -128,7 +128,7 @@
   --input-border: oklch(85% 3% 200);
   --input-focused: oklch(from var(--color-accent) 80% c h);
   --input-placeholder: oklch(40% 3% 200);
-  --input-options: rgba(255, 255, 255, 0.8);
+  --input-options: rgba(255, 255, 255, 0.9);
 
   --scroll: oklch(80% 0 360 / 0.7);
   --scroll-hover: oklch(70% 0 360 / 0.7);
@@ -170,7 +170,7 @@
   --input-border: none;
   --input-focused: oklch(from var(--color-accent) 45% c h);
   --input-placeholder: oklch(70% 3% 200);
-  --input-options: oklch(35% 4% 200 / 0.8);
+  --input-options: oklch(35% 4% 200 / 0.9);
 
   --scroll: oklch(55% 4% 200 / 0.7);
   --scroll-hover: oklch(65% 4% 200 / 0.7);
