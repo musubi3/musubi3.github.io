@@ -23,10 +23,10 @@ document.addEventListener('DOMContentLoaded', function () {
     : "https://musubi3.github.io/";
 
   let pages = [
-    { url: 'index.html', title: 'Home' },
-    { url: 'resume/index.html', title: 'Resume' },
-    { url: 'projects/index.html', title: 'Projects' },
-    { url: 'contact/index.html', title: 'Contact' },
+    { url: '', title: 'Home' },
+    { url: 'resume', title: 'Resume' },
+    { url: 'projects', title: 'Projects' },
+    { url: 'contact', title: 'Contact' },
     { url: 'https://github.com/musubi3', title: 'GitHub' },
     { url: 'https://www.linkedin.com/in/justin-lee-634719352/', title: 'LinkedIn' }
   ];
@@ -50,7 +50,6 @@ document.addEventListener('DOMContentLoaded', function () {
     let url = p.url;
     let title = p.title;
 
-    // Handle URL construction
     if (!url.startsWith('http')) {
       url = BASE_PATH + url;
     }
@@ -59,11 +58,15 @@ document.addEventListener('DOMContentLoaded', function () {
     a.href = url;
     a.textContent = title;
 
-    if ((a.host === location.host && a.pathname === location.pathname) || (p.title === 'Home' && window.location.pathname === '/')) {
-      a.classList.add('current');
+    if (a.host === location.host) {
+      const cleanLink = a.pathname.replace(/index\.html$/, '').replace(/\/$/, '');
+      const cleanCurrent = location.pathname.replace(/index\.html$/, '').replace(/\/$/, '');
+
+      if (cleanLink === cleanCurrent) {
+        a.classList.add('current');
+      }
     }
 
-    // Open external links in new tab
     if (a.host !== location.host) {
       a.target = "_blank";
       a.rel = "noopener noreferrer";
