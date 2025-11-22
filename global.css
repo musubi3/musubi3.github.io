@@ -38,7 +38,7 @@
 
   --input: oklch(100% 0 360);
   --input-text: oklch(30% 3% 200);
-  --input-border: none;
+  --input-border: oklch(85% 0 360);
   --input-focused: oklch(from var(--color-accent) 80% c h);
   --input-placeholder: oklch(40% 3% 200);
   --input-options: rgba(255, 255, 255, 0.85);
@@ -127,7 +127,7 @@
 
   --input: oklch(100% 0 360);
   --input-text: oklch(30% 3% 200);
-  --input-border: none;
+  --input-border: oklch(85% 0 360);
   --input-focused: oklch(from var(--color-accent) 80% c h);
   --input-placeholder: oklch(40% 3% 200);
   --input-options: rgba(255, 255, 255, 0.9);

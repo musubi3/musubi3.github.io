@@ -74,7 +74,7 @@
   font-size: 1em;
   background: var(--input);
   color: var(--input-text);
-  border: 1px solid var(--input-border);
+  border: none;
   box-shadow: 0 2px 12px var(--card-shadow);
   border-radius: 8px;
   -webkit-appearance: none;
@@ -102,7 +102,7 @@
 }
 
 .custom-select-trigger {
-  border: 1px solid var(--input-border);
+  border: none;
   background: var(--input);
   box-shadow: 0 2px 12px var(--card-shadow);
   border-radius: 8px;
@@ -131,7 +131,7 @@
   right: 0;
   margin-top: 10px;
 
-  border: 1px solid var(--input-border);
+  border: none;
   border-radius: 8px;
   background-color: var(--input-options);
   backdrop-filter: blur(3px);
