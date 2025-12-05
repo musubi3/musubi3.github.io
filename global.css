@@ -229,6 +229,7 @@ body {
   text-align: center;
   padding: 0.9em;
   transition: all 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .nav-wrapper nav a:hover {
@@ -492,6 +493,7 @@ tr:hover {
   padding: 0.5em;
   cursor: pointer;
   color: var(--color-accent);
+  -webkit-tap-highlight-color: transparent;
 }
 
 @media (max-width: 768px) {
