@@ -3,7 +3,7 @@
         "title": "The City Where Bike Share Isn't Shared",
         "image": "https://i.postimg.cc/2SZ06jvt/image-2025-12-04-165100326.png",
         "description": "An interactive data story revealing NYC's 'transit deserts' by visualizing dense, car-free neighborhoods served by neither the subway nor the Citi Bike network.",
-        "link": "musubi3.github.io/nyc-bike-share-access",
+        "link": "https://musubi3.github.io/nyc-bike-share-access",
         "target": "_blank",
         "year": "2025",
         "tags": ["School", "Python", "JavaScript", "D3.js", "Mapbox"]
