@@ -501,10 +501,8 @@ tr:hover {
     z-index: 1000;
     background: var(--nav-bg);
     width: 100%;
-    /* Ensures full width */
     border-bottom: 1px solid var(--nav-bottom);
     margin: 0;
-    /* Remove margin gap */
   }
 
   .nav-wrapper nav {
@@ -515,7 +513,6 @@ tr:hover {
     left: 0;
     right: 0;
     width: 90%;
-    /* make sure it stretches across */
     background: var(--nav-bg);
     box-shadow: 0 4px 12px var(--nav-shadow);
     border-radius: 12px;
@@ -531,7 +528,6 @@ tr:hover {
     visibility: visible;
   }
 
-  /* Make sure hamburger stays visible and clean */
   .menu-toggle {
     display: block;
     font-size: 1.8em;
@@ -546,21 +542,19 @@ tr:hover {
   .menu-toggle:active {
     outline: none;
     background: transparent !important;
-    /* Prevent green box */
   }
 
   body {
     margin: 0;
     overflow-x: hidden;
-    /* avoid horizontal scrollbars */
     padding-bottom: 1.5em;
   }
 
   .theme-switcher {
     bottom: 0.5em;
-    /* Changed from top to bottom */
     right: 0.5em;
     padding: 0.4em 0.8em;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .theme-label {
