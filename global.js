@@ -219,6 +219,7 @@ export function renderProjects(projects, containerElement, headingLevel = 'h3') 
   for (const project of projects) {
     const link = document.createElement('a');
     link.href = project.link;
+    link.target = project.target;
 
     link.innerHTML = `
       <article class="card project-card">
