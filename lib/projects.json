@@ -38,7 +38,7 @@
     {
         "title": "The Relationship Between Calories and Recipe Rating",
         "image": "https://store.cofo.edu/cdn/shop/files/cookbookopen.png?v=1696951540",
-        "description": "A data exploration about how calories impact average recipe ratings, using Python and interactive plots.",
+        "description": "A data exploration about calories impact on average recipe ratings, using Python and interactive plots.",
         "link": "https://musubi3.github.io/recipe-calories-relationship/?theme=dark",
         "target": "_self",
         "year": "2025",
