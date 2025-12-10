@@ -46,7 +46,7 @@
     },
     {
         "title": "Wave",
-        "image": "https://i.postimg.cc/SNkLqJfF/gameplay.png",
+        "image": "../assets/wave.png",
         "description": "A simple 2D game I developed during my junior year of high school.",
         "link": "https://musubi3.github.io/Wave/?theme=dark",
         "target": "_self",
