@@ -6,7 +6,7 @@
         "link": "https://musubi3.github.io/nyc-bike-share-access",
         "target": "_self",
         "year": "2025",
-        "tags": ["School", "Python", "JavaScript", "D3.js", "Mapbox"]
+        "tags": ["School", "Python", "JavaScript", "D3.js", "Mapbox GL", "scikit-learn", "pandas"]
     },
     {
         "title": "44,000 Riders, Zero Trains: A Case for the Geary Subway",
@@ -24,7 +24,7 @@
         "link": "https://musubi3.github.io/boston-bike-watching",
         "target": "_self",
         "year": "2025",
-        "tags": ["School", "JavaScript", "D3.js", "Mapbox"]
+        "tags": ["School", "JavaScript", "D3.js", "Mapbox GL"]
     },
     {
         "title": "Persuasive or Deceptive Visualization?",
