@@ -222,7 +222,7 @@
 }
 
 .github-stats {
-  padding: 1em 0 2em 2rem;
+  padding: 2em;
   border-radius: 8px;
   background: var(--card);
   border: 1px solid var(--card-border);
@@ -262,5 +262,18 @@
   .hero-image img {
     width: 100%;
     height: auto;
+  }
+
+  .github-stats {
+    padding: 1em;
+  }
+
+  #profile-stats dt {
+    font-size: 0.5rem;
+    letter-spacing: 0.5px;
+  }
+
+  #profile-stats dd {
+    font-size: 2rem;
   }
 }
