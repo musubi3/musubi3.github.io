@@ -6,7 +6,7 @@
         "link": "https://musubi3.github.io/nyc-bike-share-access",
         "target": "_self",
         "year": "2025",
-        "tags": ["School", "Python", "JavaScript", "D3.js", "Mapbox GL", "scikit-learn", "pandas"]
+        "tags": ["School", "Python", "JavaScript", "D3.js", "Mapbox GL", "SciPy", "NumPy", "NetworkX", "pandas", "geopandas"]
     },
     {
         "title": "44,000 Riders, Zero Trains: A Case for the Geary Subway",
@@ -15,7 +15,7 @@
         "link": "https://musubi3.github.io/sfmta-geary-subway",
         "target": "_self",
         "year": "2025",
-        "tags": ["Personal", "Python", "pandas", "JavaScript", "D3.js"]
+        "tags": ["Personal", "Python", "pandas", "JavaScript", "D3.js", "geopandas"]
     },
     {
         "title": "Visualizing Boston's Bike Share Network",
@@ -42,7 +42,7 @@
         "link": "https://musubi3.github.io/recipe-calories-relationship/?theme=dark",
         "target": "_self",
         "year": "2025",
-        "tags": ["School", "Python", "pandas", "plotly", "scikit-learn"]
+        "tags": ["School", "Python", "pandas", "Plotly", "scikit-learn", "NumPy"]
     },
     {
         "title": "Wave",
