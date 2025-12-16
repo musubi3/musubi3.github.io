@@ -6,6 +6,32 @@ function $$(selector) {
   return Array.from(document.querySelectorAll(selector));
 }
 
+(function () {
+  // Get theme from URL parameter
+  const urlParams = new URLSearchParams(window.location.search);
+  const theme = urlParams.get('theme');
+
+  // Also check localStorage for consistency
+  const savedTheme = localStorage.colorScheme;
+
+  // Priority: URL param > localStorage > system preference
+  let finalTheme;
+  if (theme === 'light' || theme === 'dark') {
+    finalTheme = theme;
+  } else if (savedTheme === 'light' || savedTheme === 'dark') {
+    finalTheme = savedTheme;
+  } else {
+    // Auto mode - use system preference
+    finalTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  if (finalTheme === 'light' || finalTheme === 'dark') {
+    document.documentElement.setAttribute('color-scheme', finalTheme);
+    document.documentElement.style.setProperty('color-scheme', finalTheme);
+    localStorage.colorScheme = finalTheme;
+  }
+})();
+
 // DARK MODE - Move this to execute immediately
 (function () {
   // Apply saved scheme immediately if it exists
@@ -112,20 +138,25 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function addDarkModeSwitcher() {
-  document.body.insertAdjacentHTML(
-    'afterbegin',
-    `
+  // Create the toggle element
+  const toggleHTML = `
     <div class="theme-switcher">
       <label class="switch">
         <input type="checkbox" id="theme-toggle">
         <span class="slider"></span>
       </label>
       <span class="theme-label">Dark Mode</span>
-    </div>`
-  );
+    </div>`;
+
+  document.body.insertAdjacentHTML('afterbegin', toggleHTML);
 
   const toggle = document.querySelector('#theme-toggle');
   const label = document.querySelector('.theme-label');
+
+  if (!toggle || !label) {
+    console.error('Theme toggle elements not found');
+    return;
+  }
 
   // Load saved preference
   if ('colorScheme' in localStorage) {
@@ -133,11 +164,9 @@ function addDarkModeSwitcher() {
     if (savedScheme === 'dark') {
       toggle.checked = true;
       label.textContent = 'Dark Mode';
-      applyColorScheme('dark');
     } else if (savedScheme === 'light') {
       toggle.checked = false;
       label.textContent = 'Light Mode';
-      applyColorScheme('light');
     } else {
       // Auto mode
       const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -154,6 +183,7 @@ function addDarkModeSwitcher() {
   toggle.addEventListener('change', function () {
     const scheme = this.checked ? 'dark' : 'light';
     applyColorScheme(scheme);
+    reloadPlots();
     localStorage.colorScheme = scheme;
     label.textContent = scheme === 'dark' ? 'Dark Mode' : 'Light Mode';
 
@@ -181,11 +211,27 @@ function addDarkModeSwitcher() {
   function updateExternalLinks(theme) {
     // Update all external project links with theme parameter
     document.querySelectorAll('a[href*="github.io"]').forEach(link => {
-      // No 'if' check is needed here
-      const url = new URL(link.href);
-      url.searchParams.set('theme', theme);
-      link.href = url.toString();
+      if (link.hostname !== window.location.hostname) {
+        const url = new URL(link.href);
+        url.searchParams.set('theme', theme);
+        link.href = url.toString();
+      }
     });
+  }
+
+  function reloadPlots() {
+    const plotContainers = document.querySelectorAll('.plot-container');
+    if (plotContainers) {
+      plotContainers.forEach(container => {
+        const iframe = container.querySelector('iframe');
+        const loader = container.querySelector('.loader');
+        if (iframe && loader) {
+          loader.style.display = 'flex';
+          iframe.classList.remove('loaded');
+          iframe.contentWindow.location.reload(true);
+        }
+      });
+    }
   }
 }
 
