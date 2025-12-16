@@ -71,6 +71,9 @@ document.addEventListener('DOMContentLoaded', function () {
   let nav = document.createElement('nav');
   nav.id = 'main-nav';
 
+  let matchFound = false;
+  let projectsLink = null;
+
   // Add links to navigation
   for (let p of pages) {
     let url = p.url;
@@ -83,6 +86,10 @@ document.addEventListener('DOMContentLoaded', function () {
     let a = document.createElement('a');
     a.href = url;
     a.textContent = title;
+    
+    if (title === 'Projects') {
+      projectsLink = a;
+    }
 
     if (a.host === location.host) {
       const cleanLink = a.pathname.replace(/index\.html$/, '').replace(/\/$/, '');
@@ -99,6 +106,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     nav.appendChild(a);
+  }
+
+  if (!matchFound && projectsLink) {
+    projectsLink.classList.add('current');
   }
 
   // Assemble the navigation structure
