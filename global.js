@@ -97,6 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       if (cleanLink === cleanCurrent) {
         a.classList.add('current');
+        matchFound = true;
       }
     }
 
