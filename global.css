@@ -218,7 +218,7 @@ body {
   border-radius: 12px;
   overflow: hidden;
   margin: 1em auto 2em;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(5px);
 }
 
 
@@ -259,7 +259,7 @@ body {
   border-radius: 50px;
   box-shadow: 0 2px 16px var(--nav-shadow);
   z-index: 1001;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(5px);
 }
 
 .theme-label {
