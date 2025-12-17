@@ -22,7 +22,7 @@
   --link: oklch(from var(--color-accent) 65% c h);
   --link-hover: oklch(from var(--color-accent) 80% c h);
 
-  --toc: oklch(from var(--color-accent) 96% 3% h);
+  --toc: white;
   --tag: oklch(from var(--color-accent) 95% 5% h);
   --tag-text: oklch(from var(--color-accent) 55% c h);
   --tag-border: oklch(from var(--color-accent) 90% 5% h);
@@ -67,7 +67,7 @@
     --link: oklch(from var(--color-accent) 80% c h);
     --link-hover: oklch(from var(--color-accent) 95% c h);
 
-    --toc: oklch(from var(--color-accent) 29% 3% h);
+    --toc: oklch(30% 4% 200);
     --tag: oklch(from var(--color-accent) 30% 10% h);
     --tag-text: var(--color-accent);
     --tag-border: oklch(from var(--color-accent) 35% 10% h);
@@ -111,7 +111,7 @@
   --link: oklch(from var(--color-accent) 65% c h);
   --link-hover: oklch(from var(--color-accent) 80% c h);
 
-  --toc: oklch(from var(--color-accent) 96% 3% h);
+  --toc: white;
   --tag: oklch(from var(--color-accent) 95% 5% h);
   --tag-text: oklch(from var(--color-accent) 55% c h);
   --tag-border: oklch(from var(--color-accent) 90% 5% h);
@@ -154,7 +154,7 @@
   --link: oklch(from var(--color-accent) 80% c h);
   --link-hover: oklch(from var(--color-accent) 95% c h);
 
-  --toc: oklch(from var(--color-accent) 29% 3% h);
+  --toc: oklch(30% 4% 200);
   --tag: oklch(from var(--color-accent) 30% 10% h);
   --tag-text: var(--color-accent);
   --tag-border: oklch(from var(--color-accent) 35% 10% h);
