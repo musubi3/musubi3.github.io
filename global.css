@@ -162,7 +162,7 @@
 
   --card: oklch(30% 4% 200);
   --card-shadow: oklch(0% 0% 0 / 0.2);
-  --card-border: oklch(35% 3% 200);
+  --card-border: oklch(40% 4% 200);
   --card-hover: oklch(0% 0% 0 / 0.7);
 
   --table-hover: oklch(from var(--color-accent) 32% 10% h);
