@@ -22,7 +22,6 @@
   --link: oklch(from var(--color-accent) 65% c h);
   --link-hover: oklch(from var(--color-accent) 80% c h);
 
-  --toc: white;
   --tag: oklch(from var(--color-accent) 95% 5% h);
   --tag-text: oklch(from var(--color-accent) 55% c h);
   --tag-border: oklch(from var(--color-accent) 90% 5% h);
@@ -67,7 +66,6 @@
     --link: oklch(from var(--color-accent) 80% c h);
     --link-hover: oklch(from var(--color-accent) 95% c h);
 
-    --toc: oklch(30% 4% 200);
     --tag: oklch(from var(--color-accent) 30% 10% h);
     --tag-text: var(--color-accent);
     --tag-border: oklch(from var(--color-accent) 35% 10% h);
@@ -111,7 +109,6 @@
   --link: oklch(from var(--color-accent) 65% c h);
   --link-hover: oklch(from var(--color-accent) 80% c h);
 
-  --toc: white;
   --tag: oklch(from var(--color-accent) 95% 5% h);
   --tag-text: oklch(from var(--color-accent) 55% c h);
   --tag-border: oklch(from var(--color-accent) 90% 5% h);
@@ -154,7 +151,6 @@
   --link: oklch(from var(--color-accent) 80% c h);
   --link-hover: oklch(from var(--color-accent) 95% c h);
 
-  --toc: oklch(30% 4% 200);
   --tag: oklch(from var(--color-accent) 30% 10% h);
   --tag-text: var(--color-accent);
   --tag-border: oklch(from var(--color-accent) 35% 10% h);
@@ -406,7 +402,8 @@ code {
 }
 
 .toc {
-  background: var(--toc);
+  background: var(--card);
+  border: 1px solid var(--card-border);
   box-shadow: 0 4px 12px var(--card-shadow);
   padding: 1.5em;
   border-radius: 8px;
