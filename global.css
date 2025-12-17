@@ -411,6 +411,7 @@ code {
 }
 
 .toc h3 {
+  color: var(--h2-text);
   margin-top: 0;
 }
 
