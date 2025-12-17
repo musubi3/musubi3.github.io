@@ -16,6 +16,9 @@
   --skill-bg-3: oklch(95% 15% 300);
   --skill-color-3: oklch(30% 30% 300);
   --skill-border-3: oklch(80% 20% 300);
+
+  --view-project: oklch(from var(--color-accent) 95% 5% h);
+  --view-project-border: oklch(from var(--color-accent) 90% 10% h);
 }
 
 /* Dark mode when OS prefers dark and no manual override */
@@ -37,6 +40,9 @@
     --skill-bg-3: oklch(35% 20% 300);
     --skill-color-3: oklch(90% 10% 300);
     --skill-border-3: oklch(50% 20% 300);
+
+    --view-project: oklch(from var(--color-accent) 35% 10% h);
+    --view-project-border: oklch(from var(--color-accent) 40% 10% h);
   }
 }
 
@@ -58,6 +64,9 @@
   --skill-bg-3: oklch(95% 15% 300);
   --skill-color-3: oklch(30% 30% 300);
   --skill-border-3: oklch(80% 20% 300);
+
+  --view-project: oklch(from var(--color-accent) 95% 5% h);
+  --view-project-border: oklch(from var(--color-accent) 90% 10% h);
 }
 
 :root[color-scheme="dark"] {
@@ -79,6 +88,9 @@
   --skill-bg-3: oklch(35% 20% 300);
   --skill-color-3: oklch(90% 10% 300);
   --skill-border-3: oklch(50% 20% 300);
+
+  --view-project: oklch(from var(--color-accent) 35% 10% h);
+  --view-project-border: oklch(from var(--color-accent) 40% 10% h);
 }
 
 /* ANIMATION */
@@ -261,8 +273,8 @@ article {
   font-weight: 500;
   padding: 0.5em 1em;
   border-radius: 8px;
-  border: 1px solid var(--tag-border);
-  background: var(--tag);
+  border: 1px solid var(--view-project-border);
+  background: var(--view-project);
   transition: all 0.2s ease;
 }
 
