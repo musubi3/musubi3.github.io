@@ -461,7 +461,7 @@ table {
   background: var(--card);
   border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0 2px 6px var(--card-shadow);
+  box-shadow: 0 2px 12px var(--card-shadow);
   border: 1px solid var(--card-border)
 }
 
