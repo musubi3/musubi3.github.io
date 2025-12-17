@@ -60,7 +60,7 @@
     --h2-text: oklch(70% 5% 200);
     --h2-bottom: oklch(55% 3% 200);
 
-    --code: oklch(from var(--color-accent) 35% 10% h);
+    --code: oklch(from var(--color-accent) 40% 15% h);
     --text-color: oklch(85% 5% 200);
 
     --link: oklch(from var(--color-accent) 80% c h);
@@ -76,7 +76,7 @@
     --card-border: oklch(35% 3% 200);
     --card-hover: oklch(0% 0% 0 / 0.7);
 
-    --table-hover: oklch(from var(--color-accent) 32% 10% h);
+    --table-hover: oklch(from var(--color-accent) 35% 15% h);
     --column-text: oklch(85% 5% 200);
 
     --input: oklch(35% 4% 200);
@@ -145,7 +145,7 @@
   --h2-text: oklch(70% 5% 200);
   --h2-bottom: oklch(55% 3% 200);
 
-  --code: oklch(from var(--color-accent) 35% 10% h);
+  --code: oklch(from var(--color-accent) 40% 15% h);
   --text-color: oklch(85% 5% 200);
 
   --link: oklch(from var(--color-accent) 80% c h);
@@ -161,7 +161,7 @@
   --card-border: oklch(40% 4% 200);
   --card-hover: oklch(0% 0% 0 / 0.7);
 
-  --table-hover: oklch(from var(--color-accent) 32% 10% h);
+  --table-hover: oklch(from var(--color-accent) 35% 15% h);
   --column-text: oklch(85% 5% 200);
 
   --input: oklch(35% 4% 200);
