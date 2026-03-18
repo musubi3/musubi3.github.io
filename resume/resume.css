@@ -173,6 +173,10 @@
   }
 }
 
+body {
+  margin-bottom: 1.5em;
+} 
+
 .resume {
   margin: 0 auto;
   line-height: 1.6;
