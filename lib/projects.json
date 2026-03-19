@@ -1,5 +1,14 @@
 [
     {
+        "title": "Southern California City Classifier",
+        "image": "https://i.ibb.co/tTBwQcfs/image-2026-03-18-191153242.png",
+        "description": "A PyTorch-based Convolutional Neural Network using a fine-tuned MobileNetV3-Large architecture to classify Southern California street-view images.",
+        "link": "https://musubi3.github.io/socal-city-classifier",
+        "target": "_self",
+        "year": "2026",
+        "tags": ["School", "Python", "PyTorch", "Pillow"]
+    },
+    {
         "title": "The City Where Bike Share Isn't Shared",
         "image": "https://i.postimg.cc/2SZ06jvt/image-2025-12-04-165100326.png",
         "description": "An interactive data story revealing NYC's 'transit deserts' by visualizing dense, car-free neighborhoods served by neither the subway nor the Citi Bike network.",
