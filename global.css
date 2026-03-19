@@ -442,6 +442,11 @@ code {
   color: var(--tag-text);
 }
 
+.project-info .github-link:hover {
+  background: var(--tag-hover);
+  color: white;
+}
+
 .card {
   border-radius: 10px;
   background: var(--card);
