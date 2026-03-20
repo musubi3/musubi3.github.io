@@ -374,7 +374,8 @@ h6 {
 }
 
 .project-date,
-.project-category {
+.project-category,
+.github-link {
   margin: 0.2em;
 }
 
