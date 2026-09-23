@@ -223,21 +223,20 @@ body {
   text-decoration: none;
   color: inherit;
   text-align: center;
-  padding: 0.9em;
+  padding: 0.9em 0.9em 0.5em 0.9em;
+  border-bottom: 0.4em solid transparent;
   transition: all 0.2s ease;
   -webkit-tap-highlight-color: transparent;
 }
 
 .nav-wrapper nav a:hover {
-  border-bottom: 0.4em solid var(--color-accent);
-  padding-bottom: 0.1em;
+  border-bottom-color: var(--color-accent);
   background-color: color-mix(in oklch, color-mix(in oklch, var(--color-accent, oklch(65% 50% 200)), canvas 85%) 70%, transparent);
 }
 
 
 .nav-wrapper nav a.current {
-  border-bottom: 0.4em solid var(--nav-bottom);
-  padding-bottom: 0.1em
+  border-bottom-color: var(--nav-bottom);
 }
 
 /* Theme Toggle Styles - BOTTOM RIGHT */

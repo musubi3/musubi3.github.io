@@ -212,3 +212,14 @@ body {
     min-width: 110px;
   }
 }
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.project-image-container {
+  background: linear-gradient(90deg, var(--input) 25%, var(--scroll) 50%, var(--input) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
